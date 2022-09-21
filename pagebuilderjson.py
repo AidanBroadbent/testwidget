@@ -53,46 +53,49 @@ with open('data.json',encoding="utf-8") as f:
     * {
         margin: 0;
         padding: 0;
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     }
     .ig-feed {
             width: 100%;
             height: 100%;
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            grid-template-rows: repeat(auto-fit, minmax(320px, 1fr));
             grid-gap: 0;
+            overflow-x: hidden;
         }
         .ig-post {
-            display: flex;
-            width: 20vw;
-            height: 30vh;
+        }
+        a {
+            text-decoration: none;
+            color: white;
             overflow: hidden;
         }
         .ig-caption {
             opacity: 0;
             position: relative;
-            margin-top: -100%;
-            padding: 5%;
             text-align: center;
-            width: 100%;
+            margin: auto;
+            margin-top: -100%;
+            width: 90%;
             transition: 0.3s;
             color: white;
-            max-width: 15vw;
             word-break: break-all;
+            text-decoration: none;
         }
         .ig-caption:visited {
             text-decoration: none;
             color: white;
         }
         .ig-post:hover img,.ig-post:hover video {
-            width: 30vw;
-            height: 35vh;
+            width: 110%;
+            height: 110%;
+            filter: blur(3px);
         }
         .ig-post:hover .ig-caption {
             opacity: 1;
         }
         .ig-post img, .ig-post video {
-            width: 20vw;
-            height: 30vh;
             object-fit: none;
             transition: 0.3s;
         }</style>
