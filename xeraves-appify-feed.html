@@ -1,0 +1,120 @@
+<div class="ig-feed"><a href="https://instagram.com/p/CiOnPvMJEPZ" target="_blank"><div class="ig-post"><img src="xeraves\CiOnPvMJEPZ.jpg" width="100%" height="100%"/><div class="ig-caption"><p class="ig-caption-text">end of 10 era
+
+#3d #c4d #otoy #maxon #octane #cinema4d #art #human #potrait</p></div></div></a><a href="https://instagram.com/p/ChPArclpvwM" target="_blank"><div class="ig-post"><img src="xeraves\ChPArclpvwM.jpg" width="100%" height="100%"/><div class="ig-caption"><p class="ig-caption-text">tis he new storyline is coming to me?
+.
+/
+-
+#3dart #c4d #octane #maxon #otoy #cinema4d #archillect</p></div></div></a><a href="https://instagram.com/p/CgntrH0JB4a" target="_blank"><div class="ig-post"><img src="xeraves\CgntrH0JB4a.jpg" width="100%" height="100%"/><div class="ig-caption"><p class="ig-caption-text">15+ 💫 {hpbdays to me, hope for the best next year</p></div></div></a><a href="https://instagram.com/p/Cf8kRmWJLmj" target="_blank"><div class="ig-post"><img src="xeraves\Cf8kRmWJLmj.jpg" width="100%" height="100%"/><div class="ig-caption"><p class="ig-caption-text">contaminating 
+
+#3dart #c4d #octane #maxon #otoy #cinema4d #archillect</p></div></div></a><a href="https://instagram.com/p/CfMG5hkp-Ju" target="_blank"><div class="ig-post"><img src="xeraves\CfMG5hkp-Ju.jpg" width="100%" height="100%"/><div class="ig-caption"><p class="ig-caption-text">im tired. 
+.
+.
+.
+#3d #art #octanerender #octane #maxon</p></div></div></a><a href="https://instagram.com/p/CeC5aSKpwAI" target="_blank"><div class="ig-post"><img src="xeraves\CeC5aSKpwAI.jpg" width="100%" height="100%"/><div class="ig-caption"><p class="ig-caption-text">Im such a demon in your life
+.
+.
+.
+#3dvisually #nuviarchive #otoy #octanerender #octane #cinema4d</p></div></div></a></div><style>
+    * {
+        margin: 0;
+        padding: 0;
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    }
+    body {
+        background-color: black;
+        overflow: hidden;
+    }
+    *::-webkit-scrollbar {
+        display: none;
+    }
+    * {
+        -ms-overflow-style: none;  /* IE and Edge */
+        scrollbar-width: none;  /* Firefox */
+    }
+    .ig-feed {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(clamp(250px, 25vw, 750px), 1fr));
+            height: auto;
+            overflow: hidden;
+        }
+        .ig-post {
+        }
+        a {
+            text-decoration: none;
+            aspect-ratio: 1;
+            overflow: hidden;
+            cursor: url;
+        }
+        .ig-caption {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            padding: 1vw;
+            position: relative;
+            text-align: center;
+            margin: auto;
+            font-size: 1rem;
+            margin-top: -75%;
+            width: 90%;
+            text-shadow: 2px 2px 2px black;
+            transition: 0.2s;
+            color: white;
+            word-break: break-all;
+            text-decoration: none;
+        }
+        .ig-caption:visited {
+            text-decoration: none;
+            color: white;
+        }
+        ig-caption-text {
+            
+        }
+        .ig-post:hover img,.ig-post:hover video, .ig-post:active img, .ig-post:active video {
+            transform: scale(1.4);
+            filter: blur(4px);
+        }
+        .ig-post:hover .ig-caption, .ig-post:active .ig-caption {
+            opacity: 1;
+        }
+        .ig-post img, .ig-post video {
+            transition: 1s;
+            object-fit: cover;
+        }</style>
+        <script>
+            function adjustGrid() {
+                let igFeed = document.querySelector('.ig-feed')
+                let width = igFeed.offsetWidth
+                let igPosts = igFeed.children
+                if (igPosts.length <= 12) {
+                    return
+                }
+                if (width > 1000) {
+                    while (!(igPosts.length % 4 === 0)){
+                        lastChild = igFeed.lastChild
+                        igFeed.removeChild(lastChild)
+                    }
+                } else if (width > 750) {
+                    while (!(igPosts.length % 3 === 0)){
+                        lastChild = igFeed.lastChild
+                        igFeed.removeChild(lastChild)
+                    }
+
+                } else if (width > 500) {
+                    while (!(igPosts.length % 2 === 0)){
+                        lastChild = igFeed.lastChild
+                        igFeed.removeChild(lastChild)
+                    }
+
+                } else {
+                    while (!(igPosts.length % 1 === 0)){
+                        lastChild = igFeed.lastChild
+                        igFeed.removeChild(lastChild)
+                    }
+                }
+                return
+            }
+            adjustGrid()
+            window.onresize = adjustGrid
+        </script>

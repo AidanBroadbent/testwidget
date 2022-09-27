@@ -1,4 +1,8 @@
-<div class="ig-feed"><a href="https://instagram.com/p/CRXFZIFFjaj" target="_blank"><div class="ig-post"><video src="simonnnn\CRXFZIFFjaj.mp4" autoplay loop width="100%" height="100%" muted></video><div class="ig-caption"><p class="ig-caption-text">Visualizer full pikado para la banda🖤💥
+<div class="ig-feed"><a href="https://instagram.com/p/B3hfwdwnR_-" target="_blank"><div class="ig-post"><img src="simonnnn\B3hfwdwnR_-.jpg" width="100%" height="100%"/><div class="ig-caption"><p class="ig-caption-text">Recopilacion de flashadas 18-19
+
+Música: Shag - Dreaming Gameboys
+
+#cinema4d #adobe #nature #eyegasm #3d #render #motiondevotion #animation #music #reactive #instagram #hplusfave #forest #visual #art </p></div></div></a><a href="https://instagram.com/p/CRXFZIFFjaj" target="_blank"><div class="ig-post"><video src="simonnnn\CRXFZIFFjaj.mp4" autoplay loop width="100%" height="100%" muted></video><div class="ig-caption"><p class="ig-caption-text">Visualizer full pikado para la banda🖤💥
 
 "For the culture"
 
@@ -49,11 +53,7 @@ Follow him for the sickest beats🚀
 
 Follow him for the sickest beats🚀
 
-#c4d #motiondesign #visualizer #beat #reactive #visual #3d #3dart #digitalart #rythm #art #md</p></div></div></a><a href="https://instagram.com/p/B3hfwdwnR_-" target="_blank"><div class="ig-post"><img src="simonnnn\B3hfwdwnR_-.jpg" width="100%" height="100%"/><div class="ig-caption"><p class="ig-caption-text">Recopilacion de flashadas 18-19
-
-Música: Shag - Dreaming Gameboys
-
-#cinema4d #adobe #nature #eyegasm #3d #render #motiondevotion #animation #music #reactive #instagram #hplusfave #forest #visual #art </p></div></div></a></div><style>
+#c4d #motiondesign #visualizer #beat #reactive #visual #3d #3dart #digitalart #rythm #art #md</p></div></div></a></div><style>
     * {
         margin: 0;
         padding: 0;
@@ -61,6 +61,7 @@ Música: Shag - Dreaming Gameboys
     }
     body {
         background-color: black;
+        overflow: hidden;
     }
     *::-webkit-scrollbar {
         display: none;
@@ -71,7 +72,9 @@ Música: Shag - Dreaming Gameboys
     }
     .ig-feed {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(clamp(350px, 25vw, 1000px), 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(clamp(250px, 25vw, 750px), 1fr));
+            height: auto;
+            overflow: hidden;
         }
         .ig-post {
         }
@@ -91,6 +94,7 @@ Música: Shag - Dreaming Gameboys
             position: relative;
             text-align: center;
             margin: auto;
+            font-size: 1rem;
             margin-top: -75%;
             width: 90%;
             text-shadow: 2px 2px 2px black;
@@ -117,3 +121,39 @@ Música: Shag - Dreaming Gameboys
             transition: 1s;
             object-fit: cover;
         }</style>
+        <script>
+            function adjustGrid() {
+                let igFeed = document.querySelector('.ig-feed')
+                let width = igFeed.offsetWidth
+                let igPosts = igFeed.children
+                if (igPosts.length <= 12) {
+                    return
+                }
+                if (width > 1000) {
+                    while (!(igPosts.length % 4 === 0)){
+                        lastChild = igFeed.lastChild
+                        igFeed.removeChild(lastChild)
+                    }
+                } else if (width > 750) {
+                    while (!(igPosts.length % 3 === 0)){
+                        lastChild = igFeed.lastChild
+                        igFeed.removeChild(lastChild)
+                    }
+
+                } else if (width > 500) {
+                    while (!(igPosts.length % 2 === 0)){
+                        lastChild = igFeed.lastChild
+                        igFeed.removeChild(lastChild)
+                    }
+
+                } else {
+                    while (!(igPosts.length % 1 === 0)){
+                        lastChild = igFeed.lastChild
+                        igFeed.removeChild(lastChild)
+                    }
+                }
+                return
+            }
+            adjustGrid()
+            window.onresize = adjustGrid
+        </script>

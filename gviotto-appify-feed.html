@@ -90,13 +90,7 @@ I hope you like this work!
 .
 .
 .
-#cinema4d #c4d #cgi #octanerender #otoy #octane #digitalart #plsu</p></div></div></a><a href="https://instagram.com/p/CS0CG8_H_-o" target="_blank"><div class="ig-post"><img src="gviotto\CS0CG8_H_-o.jpg" width="100%" height="100%"/><div class="ig-caption"><p class="ig-caption-text">ALL WE HAVE NOW!! for @alok 
-
-Some visualizers i did in partnership with @budjubas for the new album called “All we have now” from @alok 
-
-Always thank you @wilame for the opportunity 
-
-Rendered in @s</p></div></div></a><a href="https://instagram.com/p/CQraQgqnLY3" target="_blank"><div class="ig-post"><video src="gviotto\CQraQgqnLY3.mp4" autoplay loop width="100%" height="100%" muted></video><div class="ig-caption"><p class="ig-caption-text">UNDERWATER LIFE
+#cinema4d #c4d #cgi #octanerender #otoy #octane #digitalart #plsu</p></div></div></a><a href="https://instagram.com/p/CQraQgqnLY3" target="_blank"><div class="ig-post"><video src="gviotto\CQraQgqnLY3.mp4" autoplay loop width="100%" height="100%" muted></video><div class="ig-caption"><p class="ig-caption-text">UNDERWATER LIFE
 
 - At the bottom of the ocean where everything should be in darkness there's an angel illuminating and creating life for everything that lays there. 
 
@@ -109,7 +103,17 @@ by @alok with the participation of @magazineluiza and @samsungbrasil
 3D, direção e roteiro by me
 
 @picmapost - Magalu Scenes
-@wilame - E</p></div></div></a></div><style>
+@wilame - E</p></div></div></a><a href="https://instagram.com/p/CNVSAtNHTzo" target="_blank"><div class="ig-post"><video src="gviotto\CNVSAtNHTzo.mp4" autoplay loop width="100%" height="100%" muted></video><div class="ig-caption"><p class="ig-caption-text">PEACEKEEPER🐉
+
+Available for offers on 
+@makersplaceco 
+
+"In the chinese mythology, dragons can be as big as the universe or as small as a silkworm."🌺
+
+3D Animation - NFT 1/1🌸
+
+SFX by @apollo____808 
+.</p></div></div></a></div><style>
     * {
         margin: 0;
         padding: 0;
@@ -117,6 +121,7 @@ by @alok with the participation of @magazineluiza and @samsungbrasil
     }
     body {
         background-color: black;
+        overflow: hidden;
     }
     *::-webkit-scrollbar {
         display: none;
@@ -127,7 +132,9 @@ by @alok with the participation of @magazineluiza and @samsungbrasil
     }
     .ig-feed {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(clamp(350px, 25vw, 1000px), 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(clamp(250px, 25vw, 750px), 1fr));
+            height: auto;
+            overflow: hidden;
         }
         .ig-post {
         }
@@ -147,6 +154,7 @@ by @alok with the participation of @magazineluiza and @samsungbrasil
             position: relative;
             text-align: center;
             margin: auto;
+            font-size: 1rem;
             margin-top: -75%;
             width: 90%;
             text-shadow: 2px 2px 2px black;
@@ -173,3 +181,39 @@ by @alok with the participation of @magazineluiza and @samsungbrasil
             transition: 1s;
             object-fit: cover;
         }</style>
+        <script>
+            function adjustGrid() {
+                let igFeed = document.querySelector('.ig-feed')
+                let width = igFeed.offsetWidth
+                let igPosts = igFeed.children
+                if (igPosts.length <= 12) {
+                    return
+                }
+                if (width > 1000) {
+                    while (!(igPosts.length % 4 === 0)){
+                        lastChild = igFeed.lastChild
+                        igFeed.removeChild(lastChild)
+                    }
+                } else if (width > 750) {
+                    while (!(igPosts.length % 3 === 0)){
+                        lastChild = igFeed.lastChild
+                        igFeed.removeChild(lastChild)
+                    }
+
+                } else if (width > 500) {
+                    while (!(igPosts.length % 2 === 0)){
+                        lastChild = igFeed.lastChild
+                        igFeed.removeChild(lastChild)
+                    }
+
+                } else {
+                    while (!(igPosts.length % 1 === 0)){
+                        lastChild = igFeed.lastChild
+                        igFeed.removeChild(lastChild)
+                    }
+                }
+                return
+            }
+            adjustGrid()
+            window.onresize = adjustGrid
+        </script>

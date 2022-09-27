@@ -1,4 +1,8 @@
-<div class="ig-feed"><a href="https://instagram.com/p/CS89zV_M1T0" target="_blank"><div class="ig-post"><img src="masytrix\CS89zV_M1T0.jpg" width="100%" height="100%"/><div class="ig-caption"><p class="ig-caption-text">"Pain" by @masytrix
+<div class="ig-feed"><a href="https://instagram.com/p/CHqwX67BHaw" target="_blank"><div class="ig-post"><img src="masytrix\CHqwX67BHaw.jpg" width="100%" height="100%"/><div class="ig-caption"><p class="ig-caption-text">This is the full length video for @100percentlove. Enjoy. #anime #ova #edit #merch</p></div></div></a><a href="https://instagram.com/p/CGgAmXSBMB_" target="_blank"><div class="ig-post"><img src="masytrix\CGgAmXSBMB_.jpg" width="100%" height="100%"/><div class="ig-caption"><p class="ig-caption-text">Lila Preview 🧃 @nes100pro
+This is an edit with some inspiration and the challange material from @fvckrender for the artist @nes100pro.
+
+°
+#nesmiccek #fvckrender #FVCKRENDER #3d #edit #flm #vfx #colorg</p></div></div></a><a href="https://instagram.com/p/CS89zV_M1T0" target="_blank"><div class="ig-post"><img src="masytrix\CS89zV_M1T0.jpg" width="100%" height="100%"/><div class="ig-caption"><p class="ig-caption-text">"Pain" by @masytrix
 Challenge by @team.blackcat
 
 I believe this artwork is a quite good representation of this specific feeling.
@@ -38,14 +42,10 @@ Erinnert mich ad Simpsons 3D Episode. Damn isch die Creepy gsi.
 #meme #nes100pro #cat #true</p></div></div></a><a href="https://instagram.com/p/CIQM-GrBVVI" target="_blank"><div class="ig-post"><img src="masytrix\CIQM-GrBVVI.jpg" width="100%" height="100%"/><div class="ig-caption"><p class="ig-caption-text">⚡ SWIPE 💫 #UÄÄÄ
 Eine meiner ersten 3D Artworks, dedicated an eine alte Zeit & Community 😂 Danke für den Call letztens 😉👌
 
-#3dart #community #portal #whale #wal #blue #purple #pink #artwork #blender #n</p></div></div></a><a href="https://instagram.com/p/CHqwX67BHaw" target="_blank"><div class="ig-post"><video src="masytrix\CHqwX67BHaw.mp4" autoplay loop width="100%" height="100%" muted></video><div class="ig-caption"><p class="ig-caption-text">This is the full length video for @100percentlove. Enjoy. #anime #ova #edit #merch</p></div></div></a><a href="https://instagram.com/p/CHqvoMBBh3A" target="_blank"><div class="ig-post"><video src="masytrix\CHqvoMBBh3A.mp4" autoplay loop width="100%" height="100%" muted></video><div class="ig-caption"><p class="ig-caption-text">A work for @100percentlove 👌
+#3dart #community #portal #whale #wal #blue #purple #pink #artwork #blender #n</p></div></div></a><a href="https://instagram.com/p/CHqvoMBBh3A" target="_blank"><div class="ig-post"><video src="masytrix\CHqvoMBBh3A.mp4" autoplay loop width="100%" height="100%" muted></video><div class="ig-caption"><p class="ig-caption-text">A work for @100percentlove 👌
 This was a spontaneous shoot as we  had the opportunity to shoot with a double rainbow. 
  Support Love - Support Humanity
-Thanks @thexavytrain #fashion #edit #commercial</p></div></div></a><a href="https://instagram.com/p/CGgAmXSBMB_" target="_blank"><div class="ig-post"><video src="masytrix\CGgAmXSBMB_.mp4" autoplay loop width="100%" height="100%" muted></video><div class="ig-caption"><p class="ig-caption-text">Lila Preview 🧃 @nes100pro
-This is an edit with some inspiration and the challange material from @fvckrender for the artist @nes100pro.
-
-°
-#nesmiccek #fvckrender #FVCKRENDER #3d #edit #flm #vfx #colorg</p></div></div></a></div><style>
+Thanks @thexavytrain #fashion #edit #commercial</p></div></div></a></div><style>
     * {
         margin: 0;
         padding: 0;
@@ -53,6 +53,7 @@ This is an edit with some inspiration and the challange material from @fvckrende
     }
     body {
         background-color: black;
+        overflow: hidden;
     }
     *::-webkit-scrollbar {
         display: none;
@@ -63,7 +64,9 @@ This is an edit with some inspiration and the challange material from @fvckrende
     }
     .ig-feed {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(clamp(350px, 25vw, 1000px), 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(clamp(250px, 25vw, 750px), 1fr));
+            height: auto;
+            overflow: hidden;
         }
         .ig-post {
         }
@@ -83,6 +86,7 @@ This is an edit with some inspiration and the challange material from @fvckrende
             position: relative;
             text-align: center;
             margin: auto;
+            font-size: 1rem;
             margin-top: -75%;
             width: 90%;
             text-shadow: 2px 2px 2px black;
@@ -109,3 +113,39 @@ This is an edit with some inspiration and the challange material from @fvckrende
             transition: 1s;
             object-fit: cover;
         }</style>
+        <script>
+            function adjustGrid() {
+                let igFeed = document.querySelector('.ig-feed')
+                let width = igFeed.offsetWidth
+                let igPosts = igFeed.children
+                if (igPosts.length <= 12) {
+                    return
+                }
+                if (width > 1000) {
+                    while (!(igPosts.length % 4 === 0)){
+                        lastChild = igFeed.lastChild
+                        igFeed.removeChild(lastChild)
+                    }
+                } else if (width > 750) {
+                    while (!(igPosts.length % 3 === 0)){
+                        lastChild = igFeed.lastChild
+                        igFeed.removeChild(lastChild)
+                    }
+
+                } else if (width > 500) {
+                    while (!(igPosts.length % 2 === 0)){
+                        lastChild = igFeed.lastChild
+                        igFeed.removeChild(lastChild)
+                    }
+
+                } else {
+                    while (!(igPosts.length % 1 === 0)){
+                        lastChild = igFeed.lastChild
+                        igFeed.removeChild(lastChild)
+                    }
+                }
+                return
+            }
+            adjustGrid()
+            window.onresize = adjustGrid
+        </script>

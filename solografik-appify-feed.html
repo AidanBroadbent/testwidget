@@ -1,4 +1,4 @@
-<div class="ig-feed"><a href="https://instagram.com/p/CfFJfTpMaEb" target="_blank"><div class="ig-post"><img src="solografik\CfFJfTpMaEb.jpg" width="100%" height="100%"/><div class="ig-caption"><p class="ig-caption-text">•Tabula Rasa•
+<div class="ig-feed"><a href="https://instagram.com/p/CJ1EE_iHmj6" target="_blank"><div class="ig-post"><img src="solografik\CJ1EE_iHmj6.jpg" width="100%" height="100%"/><div class="ig-caption"><p class="ig-caption-text"></p></div></div></a><a href="https://instagram.com/p/CfFJfTpMaEb" target="_blank"><div class="ig-post"><img src="solografik\CfFJfTpMaEb.jpg" width="100%" height="100%"/><div class="ig-caption"><p class="ig-caption-text">•Tabula Rasa•
 
 #blender3d #cyclesrender #octanerender #nft #cg #ronashand #nftart #collection #rarenft #surreal #art #cryptoartists #crypto #jewellery #cyborg #future #metaverse
 
@@ -44,7 +44,7 @@ Beautiful Chess set done by the one and only @lucaconnelli 🖤
 
 Sound by @the.art.unt
 
-#cyberpunk #bostondynamics #blender3d #cgiart #inversekinematics #scifi #cybercore #cycles #surreal #3d #renderzone #cyborg #biomechanics #teslamotors</p></div></div></a><a href="https://instagram.com/p/CJ1EE_iHmj6" target="_blank"><div class="ig-post"><img src="solografik\CJ1EE_iHmj6.jpg" width="100%" height="100%"/><div class="ig-caption"><p class="ig-caption-text"></p></div></div></a></div><style>
+#cyberpunk #bostondynamics #blender3d #cgiart #inversekinematics #scifi #cybercore #cycles #surreal #3d #renderzone #cyborg #biomechanics #teslamotors</p></div></div></a></div><style>
     * {
         margin: 0;
         padding: 0;
@@ -52,6 +52,7 @@ Sound by @the.art.unt
     }
     body {
         background-color: black;
+        overflow: hidden;
     }
     *::-webkit-scrollbar {
         display: none;
@@ -62,7 +63,9 @@ Sound by @the.art.unt
     }
     .ig-feed {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(clamp(350px, 25vw, 1000px), 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(clamp(250px, 25vw, 750px), 1fr));
+            height: auto;
+            overflow: hidden;
         }
         .ig-post {
         }
@@ -82,6 +85,7 @@ Sound by @the.art.unt
             position: relative;
             text-align: center;
             margin: auto;
+            font-size: 1rem;
             margin-top: -75%;
             width: 90%;
             text-shadow: 2px 2px 2px black;
@@ -108,3 +112,39 @@ Sound by @the.art.unt
             transition: 1s;
             object-fit: cover;
         }</style>
+        <script>
+            function adjustGrid() {
+                let igFeed = document.querySelector('.ig-feed')
+                let width = igFeed.offsetWidth
+                let igPosts = igFeed.children
+                if (igPosts.length <= 12) {
+                    return
+                }
+                if (width > 1000) {
+                    while (!(igPosts.length % 4 === 0)){
+                        lastChild = igFeed.lastChild
+                        igFeed.removeChild(lastChild)
+                    }
+                } else if (width > 750) {
+                    while (!(igPosts.length % 3 === 0)){
+                        lastChild = igFeed.lastChild
+                        igFeed.removeChild(lastChild)
+                    }
+
+                } else if (width > 500) {
+                    while (!(igPosts.length % 2 === 0)){
+                        lastChild = igFeed.lastChild
+                        igFeed.removeChild(lastChild)
+                    }
+
+                } else {
+                    while (!(igPosts.length % 1 === 0)){
+                        lastChild = igFeed.lastChild
+                        igFeed.removeChild(lastChild)
+                    }
+                }
+                return
+            }
+            adjustGrid()
+            window.onresize = adjustGrid
+        </script>

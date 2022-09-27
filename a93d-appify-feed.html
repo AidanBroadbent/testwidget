@@ -70,6 +70,7 @@ Here's a little fan-art for #doctorstrangeinthemultiverseofmadness
     }
     body {
         background-color: black;
+        overflow: hidden;
     }
     *::-webkit-scrollbar {
         display: none;
@@ -80,7 +81,9 @@ Here's a little fan-art for #doctorstrangeinthemultiverseofmadness
     }
     .ig-feed {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(clamp(350px, 25vw, 1000px), 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(clamp(250px, 25vw, 750px), 1fr));
+            height: auto;
+            overflow: hidden;
         }
         .ig-post {
         }
@@ -100,6 +103,7 @@ Here's a little fan-art for #doctorstrangeinthemultiverseofmadness
             position: relative;
             text-align: center;
             margin: auto;
+            font-size: 1rem;
             margin-top: -75%;
             width: 90%;
             text-shadow: 2px 2px 2px black;
@@ -126,3 +130,39 @@ Here's a little fan-art for #doctorstrangeinthemultiverseofmadness
             transition: 1s;
             object-fit: cover;
         }</style>
+        <script>
+            function adjustGrid() {
+                let igFeed = document.querySelector('.ig-feed')
+                let width = igFeed.offsetWidth
+                let igPosts = igFeed.children
+                if (igPosts.length <= 12) {
+                    return
+                }
+                if (width > 1000) {
+                    while (!(igPosts.length % 4 === 0)){
+                        lastChild = igFeed.lastChild
+                        igFeed.removeChild(lastChild)
+                    }
+                } else if (width > 750) {
+                    while (!(igPosts.length % 3 === 0)){
+                        lastChild = igFeed.lastChild
+                        igFeed.removeChild(lastChild)
+                    }
+
+                } else if (width > 500) {
+                    while (!(igPosts.length % 2 === 0)){
+                        lastChild = igFeed.lastChild
+                        igFeed.removeChild(lastChild)
+                    }
+
+                } else {
+                    while (!(igPosts.length % 1 === 0)){
+                        lastChild = igFeed.lastChild
+                        igFeed.removeChild(lastChild)
+                    }
+                }
+                return
+            }
+            adjustGrid()
+            window.onresize = adjustGrid
+        </script>

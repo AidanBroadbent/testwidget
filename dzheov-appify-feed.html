@@ -1,0 +1,128 @@
+<div class="ig-feed"><a href="https://instagram.com/p/CgacsMkDFRv" target="_blank"><div class="ig-post"><img src="dzheov\CgacsMkDFRv.jpg" width="100%" height="100%"/><div class="ig-caption"><p class="ig-caption-text">WEEK: 29
+
+There are so many styles this week. So hold my beer...
+
+This week's curators: @jetlagweekly, @cinetica.studio, @metamoves.nft and @jonmehra
+
+Amazing music by @grimes 
+
+#jetlagweekly #blender</p></div></div></a><a href="https://instagram.com/p/Cf0eUS2julu" target="_blank"><div class="ig-post"><img src="dzheov\Cf0eUS2julu.jpg" width="100%" height="100%"/><div class="ig-caption"><p class="ig-caption-text">@jetlagweekly 
+Curator: @accard1no
+WEEK: 27
+
+Saw this contest too late, so I had to finish the art in 24 hours hahaha. I think it was helpful and maybe I even learned something. Or not. 
+It's kind of </p></div></div></a><a href="https://instagram.com/p/CfrgMwrjq8S" target="_blank"><div class="ig-post"><img src="dzheov\CfrgMwrjq8S.jpg" width="100%" height="100%"/><div class="ig-caption"><p class="ig-caption-text">I've wanted to do test shots with the car for a long time. So, after watching the Ford vs Ferrari, I downloaded the Fiat 500 model from @design.5k on sketchfab and got this.
+
+#blender #fiat500 #blende</p></div></div></a><a href="https://instagram.com/p/CeuIvUBjv2a" target="_blank"><div class="ig-post"><img src="dzheov\CeuIvUBjv2a.jpg" width="100%" height="100%"/><div class="ig-caption"><p class="ig-caption-text">#fantasyartist #fantasyartwork #3dart #3dartist #3dartwork #blender #blendercommunity #cgi #environmentdesign #blender3d #blendercycles #cyclesrender #blenderartwork</p></div></div></a><a href="https://instagram.com/p/CdRT9DKDqxW" target="_blank"><div class="ig-post"><img src="dzheov\CdRT9DKDqxW.jpg" width="100%" height="100%"/><div class="ig-caption"><p class="ig-caption-text">experiments
+
+#blender3d #characterdesign #characteranimation #animation #cat</p></div></div></a><a href="https://instagram.com/p/CbFg5QUjOJr" target="_blank"><div class="ig-post"><img src="dzheov\CbFg5QUjOJr.jpg" width="100%" height="100%"/><div class="ig-caption"><p class="ig-caption-text"># 1 "Hold me tight" 
+The first work of my NFT collection dedicated to the war in Ukraine. Available on @withfoundation
+100% of founds will go to charity.
+Link in bio.
+.
+.
+.
+#ukraine #helpukraine #howi</p></div></div></a><a href="https://instagram.com/p/CUkxZL1t7f-" target="_blank"><div class="ig-post"><img src="dzheov\CUkxZL1t7f-.jpg" width="100%" height="100%"/><div class="ig-caption"><p class="ig-caption-text"></p></div></div></a></div><style>
+    * {
+        margin: 0;
+        padding: 0;
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    }
+    body {
+        background-color: black;
+        overflow: hidden;
+    }
+    *::-webkit-scrollbar {
+        display: none;
+    }
+    * {
+        -ms-overflow-style: none;  /* IE and Edge */
+        scrollbar-width: none;  /* Firefox */
+    }
+    .ig-feed {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(clamp(250px, 25vw, 750px), 1fr));
+            height: auto;
+            overflow: hidden;
+        }
+        .ig-post {
+        }
+        a {
+            text-decoration: none;
+            aspect-ratio: 1;
+            overflow: hidden;
+            cursor: url;
+        }
+        .ig-caption {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            padding: 1vw;
+            position: relative;
+            text-align: center;
+            margin: auto;
+            font-size: 1rem;
+            margin-top: -75%;
+            width: 90%;
+            text-shadow: 2px 2px 2px black;
+            transition: 0.2s;
+            color: white;
+            word-break: break-all;
+            text-decoration: none;
+        }
+        .ig-caption:visited {
+            text-decoration: none;
+            color: white;
+        }
+        ig-caption-text {
+            
+        }
+        .ig-post:hover img,.ig-post:hover video, .ig-post:active img, .ig-post:active video {
+            transform: scale(1.4);
+            filter: blur(4px);
+        }
+        .ig-post:hover .ig-caption, .ig-post:active .ig-caption {
+            opacity: 1;
+        }
+        .ig-post img, .ig-post video {
+            transition: 1s;
+            object-fit: cover;
+        }</style>
+        <script>
+            function adjustGrid() {
+                let igFeed = document.querySelector('.ig-feed')
+                let width = igFeed.offsetWidth
+                let igPosts = igFeed.children
+                if (igPosts.length <= 12) {
+                    return
+                }
+                if (width > 1000) {
+                    while (!(igPosts.length % 4 === 0)){
+                        lastChild = igFeed.lastChild
+                        igFeed.removeChild(lastChild)
+                    }
+                } else if (width > 750) {
+                    while (!(igPosts.length % 3 === 0)){
+                        lastChild = igFeed.lastChild
+                        igFeed.removeChild(lastChild)
+                    }
+
+                } else if (width > 500) {
+                    while (!(igPosts.length % 2 === 0)){
+                        lastChild = igFeed.lastChild
+                        igFeed.removeChild(lastChild)
+                    }
+
+                } else {
+                    while (!(igPosts.length % 1 === 0)){
+                        lastChild = igFeed.lastChild
+                        igFeed.removeChild(lastChild)
+                    }
+                }
+                return
+            }
+            adjustGrid()
+            window.onresize = adjustGrid
+        </script>

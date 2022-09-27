@@ -1,4 +1,27 @@
-<div class="ig-feed"><a href="https://instagram.com/p/Ch7dhB8tYJ0" target="_blank"><div class="ig-post"><img src="lucaconnelli\Ch7dhB8tYJ0.jpg" width="100%" height="100%"/><div class="ig-caption"><p class="ig-caption-text">„GRASHOPPER“ a collab with @lucaconnelli 
+<div class="ig-feed"><a href="https://instagram.com/p/Cbqph5lOWWM" target="_blank"><div class="ig-post"><img src="lucaconnelli\Cbqph5lOWWM.jpg" width="100%" height="100%"/><div class="ig-caption"><p class="ig-caption-text">🌌👾🍕
+Swaying mud... 
+
+Made in @blender.official 
+
+music by my broter @vngrd_music_prod ⚡
+
+#blender #3dart #simulation #eevee #mantaflow #32 #black #space #animation #motionart #liquid #trasformation</p></div></div></a><a href="https://instagram.com/p/CZhsdciMlHs" target="_blank"><div class="ig-post"><img src="lucaconnelli\CZhsdciMlHs.jpg" width="100%" height="100%"/><div class="ig-caption"><p class="ig-caption-text">polymerize
+🎼🎮🕷🧲
+1/1
+Available soon on @portionapp 💙
+
+Sounds by my bro @eracleamantia / @vngrd_music_prod ❤️💯
+
+.
+
+#3d #3danimation #blender #fluid #spider #ritual #nft #portionapp #nftart #3dnft #teamb</p></div></div></a><a href="https://instagram.com/p/Ci5UKtpN-_Z" target="_blank"><div class="ig-post"><img src="lucaconnelli\Ci5UKtpN-_Z.jpg" width="100%" height="100%"/><div class="ig-caption"><p class="ig-caption-text">🪄🧣✨✨✨
+@louisvuitton 
+.
+.
+.
+.
+.
+#louisvuitton #3dart #cloth #blender #simulation #animation #lv #lvlover #louisvuittonaddict</p></div></div></a><a href="https://instagram.com/p/Ch7dhB8tYJ0" target="_blank"><div class="ig-post"><img src="lucaconnelli\Ch7dhB8tYJ0.jpg" width="100%" height="100%"/><div class="ig-caption"><p class="ig-caption-text">„GRASHOPPER“ a collab with @lucaconnelli 
 .
 .
 .
@@ -58,27 +81,7 @@ Stay tuned by discord for this crazi release (5 pairs)✨🤍
 .
 .
 
-#nfts #nft #nftart #nftcommunity #nftcollector #nftartist #crypto #digitalart #cryptoart #art #ethereum #opensea #nftcollectors #blockchain #nftdrop #</p></div></div></a><a href="https://instagram.com/p/CcYKLoMqcgy" target="_blank"><div class="ig-post"><img src="lucaconnelli\CcYKLoMqcgy.jpg" width="100%" height="100%"/><div class="ig-caption"><p class="ig-caption-text">Crazi touch by my broter @solografik 💕using my new luivi 3d with amazing colors and details✨✨
-
-Check his profile and @team.blackcat community, much love❤️
-
-#3d #cgi #blender #louisvuitton #digital #nf</p></div></div></a><a href="https://instagram.com/p/Cbqph5lOWWM" target="_blank"><div class="ig-post"><img src="lucaconnelli\Cbqph5lOWWM.jpg" width="100%" height="100%"/><div class="ig-caption"><p class="ig-caption-text">🌌👾🍕
-Swaying mud... 
-
-Made in @blender.official 
-
-music by my broter @vngrd_music_prod ⚡
-
-#blender #3dart #simulation #eevee #mantaflow #32 #black #space #animation #motionart #liquid #trasformation</p></div></div></a><a href="https://instagram.com/p/CZhsdciMlHs" target="_blank"><div class="ig-post"><img src="lucaconnelli\CZhsdciMlHs.jpg" width="100%" height="100%"/><div class="ig-caption"><p class="ig-caption-text">polymerize
-🎼🎮🕷🧲
-1/1
-Available soon on @portionapp 💙
-
-Sounds by my bro @eracleamantia / @vngrd_music_prod ❤️💯
-
-.
-
-#3d #3danimation #blender #fluid #spider #ritual #nft #portionapp #nftart #3dnft #teamb</p></div></div></a></div><style>
+#nfts #nft #nftart #nftcommunity #nftcollector #nftartist #crypto #digitalart #cryptoart #art #ethereum #opensea #nftcollectors #blockchain #nftdrop #</p></div></div></a></div><style>
     * {
         margin: 0;
         padding: 0;
@@ -86,6 +89,7 @@ Sounds by my bro @eracleamantia / @vngrd_music_prod ❤️💯
     }
     body {
         background-color: black;
+        overflow: hidden;
     }
     *::-webkit-scrollbar {
         display: none;
@@ -96,7 +100,9 @@ Sounds by my bro @eracleamantia / @vngrd_music_prod ❤️💯
     }
     .ig-feed {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(clamp(350px, 25vw, 1000px), 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(clamp(250px, 25vw, 750px), 1fr));
+            height: auto;
+            overflow: hidden;
         }
         .ig-post {
         }
@@ -116,6 +122,7 @@ Sounds by my bro @eracleamantia / @vngrd_music_prod ❤️💯
             position: relative;
             text-align: center;
             margin: auto;
+            font-size: 1rem;
             margin-top: -75%;
             width: 90%;
             text-shadow: 2px 2px 2px black;
@@ -142,3 +149,39 @@ Sounds by my bro @eracleamantia / @vngrd_music_prod ❤️💯
             transition: 1s;
             object-fit: cover;
         }</style>
+        <script>
+            function adjustGrid() {
+                let igFeed = document.querySelector('.ig-feed')
+                let width = igFeed.offsetWidth
+                let igPosts = igFeed.children
+                if (igPosts.length <= 12) {
+                    return
+                }
+                if (width > 1000) {
+                    while (!(igPosts.length % 4 === 0)){
+                        lastChild = igFeed.lastChild
+                        igFeed.removeChild(lastChild)
+                    }
+                } else if (width > 750) {
+                    while (!(igPosts.length % 3 === 0)){
+                        lastChild = igFeed.lastChild
+                        igFeed.removeChild(lastChild)
+                    }
+
+                } else if (width > 500) {
+                    while (!(igPosts.length % 2 === 0)){
+                        lastChild = igFeed.lastChild
+                        igFeed.removeChild(lastChild)
+                    }
+
+                } else {
+                    while (!(igPosts.length % 1 === 0)){
+                        lastChild = igFeed.lastChild
+                        igFeed.removeChild(lastChild)
+                    }
+                }
+                return
+            }
+            adjustGrid()
+            window.onresize = adjustGrid
+        </script>

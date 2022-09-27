@@ -1,4 +1,13 @@
-<div class="ig-feed"><a href="https://instagram.com/p/CK57HmlhwkW" target="_blank"><div class="ig-post"><img src="kylanluginbuhl\CK57HmlhwkW.jpg" width="100%" height="100%"/><div class="ig-caption"><p class="ig-caption-text">COMPLEX MIND
+<div class="ig-feed"><a href="https://instagram.com/p/CX3OWwMhhCH" target="_blank"><div class="ig-post"><img src="kylanluginbuhl\CX3OWwMhhCH.jpg" width="100%" height="100%"/><div class="ig-caption"><p class="ig-caption-text">2021 throwback quick reel of rnd and selected works. Amazing projects and opportunities, thanks to everyone who contributed to them🌟 
+.
+.
+.
+Music : Shawn Wasabi - Tokyo Tea
+.
+.
+.
+#2021 #reel #cgi #cin</p></div></div></a><a href="https://instagram.com/p/CGsN5xNByJB" target="_blank"><div class="ig-post"><img src="kylanluginbuhl\CGsN5xNByJB.jpg" width="100%" height="100%"/><div class="ig-caption"><p class="ig-caption-text">Designer’s Table - Season 03 DTS3 Astronomie is an experimental design and experience research project in tableware and food experience made by @studioraphaellutz 
+This 3D video present the third seas</p></div></div></a><a href="https://instagram.com/p/CK57HmlhwkW" target="_blank"><div class="ig-post"><img src="kylanluginbuhl\CK57HmlhwkW.jpg" width="100%" height="100%"/><div class="ig-caption"><p class="ig-caption-text">COMPLEX MIND
 .
 .
 .
@@ -13,15 +22,7 @@ Model from Scan the World
 .
 .
 Model from Scan The World
- #cinem4d   #portait #c4d #artwork   #digitalart #vaporwaveaesthetic #howiseedatworld #surreal42 #overthinking #feltzine #3dscan   #octanerender #daily3d </p></div></div></a><a href="https://instagram.com/p/CX3OWwMhhCH" target="_blank"><div class="ig-post"><video src="kylanluginbuhl\CX3OWwMhhCH.mp4" autoplay loop width="100%" height="100%" muted></video><div class="ig-caption"><p class="ig-caption-text">2021 throwback quick reel of rnd and selected works. Amazing projects and opportunities, thanks to everyone who contributed to them🌟 
-.
-.
-.
-Music : Shawn Wasabi - Tokyo Tea
-.
-.
-.
-#2021 #reel #cgi #cin</p></div></div></a><a href="https://instagram.com/p/CVcjQBkASg4" target="_blank"><div class="ig-post"><img src="kylanluginbuhl\CVcjQBkASg4.jpg" width="100%" height="100%"/><div class="ig-caption"><p class="ig-caption-text">BEWITCH
+ #cinem4d   #portait #c4d #artwork   #digitalart #vaporwaveaesthetic #howiseedatworld #surreal42 #overthinking #feltzine #3dscan   #octanerender #daily3d </p></div></div></a><a href="https://instagram.com/p/CVcjQBkASg4" target="_blank"><div class="ig-post"><img src="kylanluginbuhl\CVcjQBkASg4.jpg" width="100%" height="100%"/><div class="ig-caption"><p class="ig-caption-text">BEWITCH
 .
 .
 .
@@ -66,8 +67,7 @@ Thanks to the amazing art director @dontcallme_candy to bring this alive ! 🌸
 .
 .
 .
- #cinema4d #c4d #artwork #digitalart #vaporwaveaesthetic #howiseedatworld #surreal42 #cyberpunk #feltzine #octanerender #daily3d #embergen #mdcommunity @motiondesigners #mgcollectiv</p></div></div></a><a href="https://instagram.com/p/CGsN5xNByJB" target="_blank"><div class="ig-post"><img src="kylanluginbuhl\CGsN5xNByJB.jpg" width="100%" height="100%"/><div class="ig-caption"><p class="ig-caption-text">Designer’s Table - Season 03 DTS3 Astronomie is an experimental design and experience research project in tableware and food experience made by @studioraphaellutz 
-This 3D video present the third seas</p></div></div></a></div><style>
+ #cinema4d #c4d #artwork #digitalart #vaporwaveaesthetic #howiseedatworld #surreal42 #cyberpunk #feltzine #octanerender #daily3d #embergen #mdcommunity @motiondesigners #mgcollectiv</p></div></div></a></div><style>
     * {
         margin: 0;
         padding: 0;
@@ -75,6 +75,7 @@ This 3D video present the third seas</p></div></div></a></div><style>
     }
     body {
         background-color: black;
+        overflow: hidden;
     }
     *::-webkit-scrollbar {
         display: none;
@@ -85,7 +86,9 @@ This 3D video present the third seas</p></div></div></a></div><style>
     }
     .ig-feed {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(clamp(350px, 25vw, 1000px), 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(clamp(250px, 25vw, 750px), 1fr));
+            height: auto;
+            overflow: hidden;
         }
         .ig-post {
         }
@@ -105,6 +108,7 @@ This 3D video present the third seas</p></div></div></a></div><style>
             position: relative;
             text-align: center;
             margin: auto;
+            font-size: 1rem;
             margin-top: -75%;
             width: 90%;
             text-shadow: 2px 2px 2px black;
@@ -131,3 +135,39 @@ This 3D video present the third seas</p></div></div></a></div><style>
             transition: 1s;
             object-fit: cover;
         }</style>
+        <script>
+            function adjustGrid() {
+                let igFeed = document.querySelector('.ig-feed')
+                let width = igFeed.offsetWidth
+                let igPosts = igFeed.children
+                if (igPosts.length <= 12) {
+                    return
+                }
+                if (width > 1000) {
+                    while (!(igPosts.length % 4 === 0)){
+                        lastChild = igFeed.lastChild
+                        igFeed.removeChild(lastChild)
+                    }
+                } else if (width > 750) {
+                    while (!(igPosts.length % 3 === 0)){
+                        lastChild = igFeed.lastChild
+                        igFeed.removeChild(lastChild)
+                    }
+
+                } else if (width > 500) {
+                    while (!(igPosts.length % 2 === 0)){
+                        lastChild = igFeed.lastChild
+                        igFeed.removeChild(lastChild)
+                    }
+
+                } else {
+                    while (!(igPosts.length % 1 === 0)){
+                        lastChild = igFeed.lastChild
+                        igFeed.removeChild(lastChild)
+                    }
+                }
+                return
+            }
+            adjustGrid()
+            window.onresize = adjustGrid
+        </script>
