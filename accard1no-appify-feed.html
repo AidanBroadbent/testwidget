@@ -1,32 +1,5 @@
 <html>
 <head>
-    <script type="text/javascript">
-        function sendHeight()
-        {
-            if(parent.postMessage)
-            {
-                // replace #wrapper with element that contains 
-                // actual page content
-                var height= document.getElementById('wrapper').offsetHeight;
-                parent.postMessage(height, '*');
-            }
-        }
-        
-        // Create browser compatible event handler.
-        var eventMethod = window.addEventListener ? "addEventListener" : "attachEvent";
-        var eventer = window[eventMethod];
-        var messageEvent = eventMethod == "attachEvent" ? "onmessage" : "message";
-        
-        // Listen for a message from the iframe.
-        eventer(messageEvent, function(e) {
-        
-            if (isNaN(e.data)) return;
-        
-            sendHeight();
-        
-        }, 
-        false);
-        </script>
 </head><div class="ig-feed"><a href="https://instagram.com/p/CclMRlXDHIX" target="_blank"><div class="ig-post"><img src="accard1no\CclMRlXDHIX.jpg" width="100%" height="100%"/><div class="ig-caption"><p class="ig-caption-text">BALANCE ☯️
 .
 in collaboration with @hellorokoko 🕺🏻
@@ -239,5 +212,33 @@ New collab piece for @ronas.hand Collection Season 2 by the brother @nes100pro �
             adjustGrid()
             window.onresize = adjustGrid
         </script>
+        <script type="text/javascript">
+            function sendHeight()
+            {
+                if(parent.postMessage)
+                {
+                    // replace #wrapper with element that contains 
+                    // actual page content
+                    var height= document.getElementById('wrapper').offsetHeight;
+                    parent.postMessage(height, '*');
+                }
+            }
+            
+            // Create browser compatible event handler.
+            var eventMethod = window.addEventListener ? "addEventListener" : "attachEvent";
+            var eventer = window[eventMethod];
+            var messageEvent = eventMethod == "attachEvent" ? "onmessage" : "message";
+            
+            // Listen for a message from the iframe.
+            eventer(messageEvent, function(e) {
+            
+                if (isNaN(e.data)) return;
+            
+                sendHeight();
+            
+            }, 
+            false);
+        </script>
+    
     </body>
 </html>
